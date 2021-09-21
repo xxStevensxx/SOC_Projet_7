@@ -9,6 +9,16 @@ import java.sql.Timestamp;
 @Table(name = "rating")
 public class Rating {
 	
+	public Rating() {}
+	public Rating(String moodysRating, String sandPRating, String fitchRating, int orderNumber ) {
+		
+		this.moodysRating = moodysRating;
+		this.sandPRating = sandPRating;
+		this.fitchRating = fitchRating;
+		this.orderNumber = orderNumber;
+		
+	}
+	
     @GeneratedValue(strategy= GenerationType.AUTO)
 	private Integer id;
 	private String moodysRating;
